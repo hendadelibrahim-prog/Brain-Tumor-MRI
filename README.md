@@ -1,28 +1,28 @@
-Brain Tumor Classification Using Logistic Regression
+تصنيف أورام المخ باستخدام Logistic Regression
 
-This project aims to classify brain MRI images into four categories: glioma, meningioma, notumor, and pituitary. The goal is to build a simple yet effective baseline model using Logistic Regression to predict the type of brain tumor from MRI scans.
+يهدف هذا المشروع إلى تصنيف صور الرنين المغناطيسي للمخ إلى أربعة أنواع: glioma، meningioma، notumor، و pituitary. الفكرة هي بناء نموذج Baseline بسيط وفعال باستخدام Logistic Regression للتنبؤ بنوع الورم في صور المخ.
 
-Project Overview
-Dataset: The project uses MRI brain images categorized into four classes. Each class contains an equal number of images to ensure balanced training.
-Classes:
-Glioma – a type of tumor that occurs in the brain and spinal cord.
-Meningioma – a tumor that arises from the meninges (protective layers around the brain and spinal cord).
-Notumor – images with no brain tumor.
-Pituitary – a tumor in the pituitary gland.
-Methodology
-Data Loading and Preprocessing:
-Images are loaded using PIL, converted to grayscale, and resized to 64x64 pixels.
-Images are flattened into 1D arrays suitable for Logistic Regression.
-Data is split into training and testing sets (80% train, 20% test).
-Feature Scaling:
-StandardScaler is applied to normalize the data, which improves the model’s performance.
-Model Training:
-Logistic Regression is used as a baseline classifier for multi-class classification.
-Multi-class is handled using the multinomial option with a suitable number of iterations (max_iter=1000).
-Evaluation:
-Model performance is evaluated using accuracy, confusion matrix, and classification report, which includes precision, recall, and F1-score for each class.
-Results
-The Logistic Regression model provides a baseline accuracy for predicting brain tumor types.
-This baseline can be improved using more advanced models like CNNs in the future.
-Usage
-You can test the model with any new MRI image using the provided prediction function, which outputs the predicted tumor class.
+نبذة عن المشروع
+البيانات: يعتمد المشروع على صور رنين مغناطيسي للمخ مصنفة إلى أربعة فئات. كل فئة تحتوي على عدد متساوي من الصور لضمان توازن التدريب.
+الفئات:
+Glioma – نوع من الأورام يظهر في المخ أو الحبل الشوكي.
+Meningioma – ورم ينشأ من الأغشية المحيطة بالمخ والحبل الشوكي.
+Notumor – صور بدون وجود أي ورم في المخ.
+Pituitary – ورم في الغدة النخامية.
+منهجية العمل
+تحميل البيانات ومعالجتها:
+تحميل الصور باستخدام مكتبة PIL، تحويلها إلى تدرجات الرمادي، وتغيير حجمها إلى 64x64 بكسل.
+تحويل الصور إلى مصفوفات 1D لتناسب Logistic Regression.
+تقسيم البيانات إلى مجموعة تدريب (80%) ومجموعة اختبار (20%).
+تقييس البيانات:
+استخدام StandardScaler لتطبيع القيم، مما يحسن أداء النموذج.
+تدريب النموذج:
+استخدام Logistic Regression كنموذج أساسي للتصنيف متعدد الفئات.
+التعامل مع تعدد الفئات باستخدام الخيار multinomial مع عدد مناسب من التكرارات (max_iter=1000).
+تقييم النموذج:
+تقييم أداء النموذج باستخدام الدقة (Accuracy)، مصفوفة الالتباس (Confusion Matrix)، وتقرير التصنيف (Classification Report) الذي يحتوي على precision و recall و F1-score لكل فئة.
+النتائج
+يوفر نموذج Logistic Regression دقة أولية لتصنيف أنواع أورام المخ.
+يمكن تحسين الأداء مستقبلاً باستخدام نماذج أكثر تقدماً مثل CNN.
+الاستخدام
+يمكن اختبار النموذج على أي صورة رنين مغناطيسي جديدة باستخدام الدالة المخصصة للتنبؤ، والتي تعطي اسم الفئة المتوقعة للورم.tputs the predicted tumor class.
